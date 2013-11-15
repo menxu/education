@@ -24,12 +24,15 @@ end
 
 gem 'jquery-rails', '2.2.1'
 
+# 登录验证
+gem 'devise', '2.2.4'
 
 # 页面渲染
 gem 'haml', '4.0.0' # HAML模板语言
 gem 'cells', '3.8.8' # 用于复用一些前端组件
 gem 'simple_form', '2.0.2' # 用于简化表单创建
 
+# 文件上传 
 gem "carrierwave", "0.8.0"
 # carrierwave 用到的图片切割
 gem "mini_magick", "3.5.0", :require => false

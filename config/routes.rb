@@ -1,4 +1,21 @@
+# 个人页
+Eshare::Application.routes.draw do
+  resources :users, :shallow => true do
+    collection do
+      get :me
+      get :content_search
+    end
+  end
+end
+
 Education::Application.routes.draw do
+  devise_for :users,:path => 'account',
+                    :controllers => {  
+                      :registrations => :account,  
+                      :sessions => :sessions  
+                    } 
+
+
   root :to => 'index#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
