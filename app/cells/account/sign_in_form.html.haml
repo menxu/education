@@ -1,0 +1,20 @@
+.sign-in-form
+  = simple_form_for User.new, :as => :user, :url => '/account/sign_in', :remote => true do |f|
+    .form-inputs
+      = f.input :login, :placeholder => '用户名/邮箱', :required => true
+      = f.input :password, :required => true, :placeholder => '密码'
+    .form-actions
+      %input{:name => :to, :type => :hidden, :value => @for}
+      = f.button :submit, '登陆测试登陆验证', :class => 'large sign-in'
+
+    .remember
+      = f.input :remember_me, :as => :boolean
+    .clearfix
+    
+.sign-res-info{:style => 'display:none;'}
+  .info{:style => 'display:none;'}
+    %i.icon-info-sign
+    %span 提示信息
+  .info.ok{:style => 'display:none;'}
+    %i.icon-ok
+    %span 登录成功

@@ -1,6 +1,6 @@
 source 'http://ruby.taobao.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.12'
 gem 'mysql2', '0.3.11' # MYSQL数据库连接
 gem 'json'
 
@@ -36,3 +36,7 @@ gem 'simple_form', '2.0.2' # 用于简化表单创建
 gem "carrierwave", "0.8.0"
 # carrierwave 用到的图片切割
 gem "mini_magick", "3.5.0", :require => false
+
+## 用户角色
+gem 'roles-field',
+    :git => 'git://github.com/mindpin/roles-field.git'

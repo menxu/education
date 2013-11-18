@@ -8,9 +8,9 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :login, :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
-
-  validates :login, :format => {:with => /\A\w+\z/}, :message => '只允许数字、字母和下划线'},
-                    :length => {6..16},
+  
+  validates :login, :format => {:with => /\A\w+\z/, :message => '只允许数字、字母和下划线'},
+                    :length => {:in => 6..16},
                     :presence => true,
                     :uniqueness => {:case_sensitive => false},
                     :unless => Proc.new { |user|
@@ -27,5 +27,20 @@ class User < ActiveRecord::Base
   # ------------ 以上是用户登录相关代码，不要改动
   # ------------ 任何代码请在下方添加
 
-  
+  # 管理员修改基本信息
+  attr_accessible :login, :name, :email, :role, :as => :manage_change_base_info
+  # 修改基本信息
+  attr_accessible :login, :name, :email, :as => :change_base_info
+  # 修改密码
+  attr_accessible :password, :password_confirmation, :as => :change_password
+
+  # 声明角色
+  attr_accessible :role
+  validates :role, :presence => true
+  roles_field :roles_mask, :roles => [:admin, :manager, :teacher, :student]
+
+  before_validation :set_default_role
+  def set_default_role
+    self.role = :student if self.role.blank?
+  end
 end

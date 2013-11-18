@@ -4,7 +4,7 @@ Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
-  config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
+  config.mailer_sender = "menxu_work@163.com"
 
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
@@ -56,7 +56,7 @@ Devise.setup do |config|
   # :token         = Support basic authentication with token authentication key
   # :token_options = Support token authentication with options as defined in
   #                  http://api.rubyonrails.org/classes/ActionController/HttpAuthentication/Token.html
-  # config.http_authenticatable = false
+  config.http_authenticatable = true
 
   # If http headers should be returned for AJAX requests. True by default.
   # config.http_authenticatable_on_xhr = true
@@ -126,7 +126,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :validatable
   # Range for password length. Default is 8..128.
-  config.password_length = 8..128
+  config.password_length = 6..128
 
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly
@@ -192,7 +192,7 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
-  # config.scoped_views = false
+  config.scoped_views = true
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).

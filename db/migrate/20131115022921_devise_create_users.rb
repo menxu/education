@@ -3,7 +3,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
     create_table(:users) do |t|
       ## 自己增加的字段
       ## login 登录名，name 显示名
-      t.string :login,              :null => false, default => ""
+      t.string :login,              :null => false, :default => ""
       t.string :name
 
       ## Database authenticatable

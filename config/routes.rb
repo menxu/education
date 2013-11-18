@@ -1,5 +1,5 @@
 # 个人页
-Eshare::Application.routes.draw do
+Education::Application.routes.draw do
   resources :users, :shallow => true do
     collection do
       get :me
@@ -15,7 +15,11 @@ Education::Application.routes.draw do
                       :sessions => :sessions  
                     } 
 
-
+  devise_scope :user do 
+    get '/two_in/sign_in' => 'sessions#new_two'
+    get '/education/sign_in' => 'sessions#new_education'
+  end
+                    
   root :to => 'index#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
