@@ -8,9 +8,9 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :login, :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
-  
+
   validates :login, :format => {:with => /\A\w+\z/, :message => '只允许数字、字母和下划线'},
-                    :length => {:in => 6..16},
+                    :length => {:in => 6..20},
                     :presence => true,
                     :uniqueness => {:case_sensitive => false},
                     :unless => Proc.new { |user|
@@ -39,8 +39,18 @@ class User < ActiveRecord::Base
   validates :role, :presence => true
   roles_field :roles_mask, :roles => [:admin, :manager, :teacher, :student]
 
+  attr_accessible :name
+
   before_validation :set_default_role
   def set_default_role
     self.role = :student if self.role.blank?
+  end
+
+  before_validation :set_login_for_internet_version
+  def set_login_for_internet_version
+    self.login = self.email if self.login.blank?
+    if self.id.blank?
+      self.password_confirmation = self.password
+    end
   end
 end

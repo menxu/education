@@ -2,11 +2,13 @@
   = simple_form_for User.new, :as => :user, :url => '/account/sign_in', :remote => true do |f|
     .form-inputs
       = f.input :login, :placeholder => '用户名/邮箱', :required => true
-      = f.input :password, :required => true, :placeholder => '密码'
+      = f.input :password, :required => true, :placeholder => '密码',:required => true
     .form-actions
-      %input{:name => :to, :type => :hidden, :value => @for}
-      = f.button :submit, '登陆测试登陆验证', :class => 'large sign-in'
-
+      = f.button :submit, t('common.sign-in'), :class => 'large sign-in'
+      / %input{:name => :to, :type => :hidden, :value => @for}
+      / = f.button :submit, '登陆测试登陆验证', :class => 'large sign-in'
+    .recover
+      %a.forget-password{:href => '/account/password/new'} 找回密码
     .remember
       = f.input :remember_me, :as => :boolean
     .clearfix

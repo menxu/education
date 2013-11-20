@@ -1,3 +1,12 @@
+.sign-up-form
+  = simple_form_for User.new, :as => :user, :url => '/account', :remote => true do |f|
+    .form-inputs
+      = f.input :email, :placeholder => '邮箱', :required => true
+      = f.input :name,  :placeholder => '昵称', :required => true
+      = f.input :password, :placeholder => '密码', :required => true
+    .form-actions
+      = f.button :submit, t('common.sign-in'), :class => 'large sign-up'
+
 .sign-res-info{:style => 'display:none;'}
   .info{:style => 'display:none;'}
     %i.icon-info-sign
