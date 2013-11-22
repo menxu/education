@@ -26,6 +26,8 @@ gem 'jquery-rails', '2.2.1'
 
 # 登录验证
 gem 'devise', '2.2.4'
+# 权限管理
+gem "cancan", "~> 1.6.10"
 
 # 页面渲染
 gem 'haml', '4.0.0' # HAML模板语言

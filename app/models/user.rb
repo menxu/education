@@ -53,4 +53,9 @@ class User < ActiveRecord::Base
       self.password_confirmation = self.password
     end
   end
+
+  private
+    def welcome_message
+      UserMailer.welcome_message(self).deliver
+    end
 end
