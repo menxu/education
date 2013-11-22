@@ -7,7 +7,14 @@
     = stylesheet_link_tag 'application'
 
   %body
-    = yield
+    %thead
+      = render_cell :layout, :login
+
+    %tbody
+      = yield
+      
+    %tfoot
+      = render_cell :layout, :tfoot
 
     = javascript_include_tag 'application'
     = yield :javascript
