@@ -24,6 +24,8 @@ end
 
 gem 'jquery-rails', '2.2.1'
 
+gem 'unicorn'
+
 # 登录验证
 gem 'devise', '2.2.4'
 # 权限管理
