@@ -22,6 +22,10 @@ group :examples do
   gem 'ruby-progressbar', '~> 1.0.2'   # 进度条 https://github.com/jfelchner/ruby-progressbar 
 end
 
+group :development do
+  gem 'thin', '~> 1.5.1'
+end
+
 gem 'jquery-rails', '2.2.1'
 
 gem 'unicorn'
