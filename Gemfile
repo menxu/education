@@ -27,6 +27,7 @@ group :development do
 end
 
 gem 'jquery-rails', '2.2.1'
+gem 'jquery-ui-rails', '4.0.2'
 
 gem 'unicorn'
 
@@ -50,3 +51,4 @@ gem 'roles-field',
     :git => 'git://github.com/mindpin/roles-field.git'
 
 gem 'faye'
+gem 'celluloid'

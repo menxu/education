@@ -1,15 +1,11 @@
 #! /usr/bin/env bash
 
-
 current_path=`cd "$(dirname "$0")"; pwd`
 . $current_path/function.sh
 
-
 processor_pid=$current_path/../../tmp/pids/thin.8080.pid
 
-
 cd $current_path/../../
-
 
 case "$1" in
   start)

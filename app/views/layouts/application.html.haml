@@ -11,7 +11,11 @@
       = render_cell :layout, :login
 
     %tbody
-      = yield
+      .short_message
+        = render 'layouts/short_message'
+
+      .content
+        = yield
       
     %tfoot
       = render_cell :layout, :tfoot

@@ -2,6 +2,8 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
+require File.expand_path('../deploy_env', __FILE__)
+
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
   Bundler.require(*Rails.groups(:assets => %w(development test)))
@@ -17,6 +19,11 @@ module Education
 
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
+    # 一般情况下这里不要轻易修改
+    # gem 的配置可以放到 initialzers 文件夹里
+
+    # Custom directories with classes and modules you want to be autoloadable.
+    config.autoload_paths += Dir["#{config.root}/lib/**/"]
 
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.

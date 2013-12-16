@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class User - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/user.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ActiveRecord::Base
+  
+</nav>
+
+    <!-- Included Modules -->
+<nav id="includes-section" class="section">
+  <h3 class="section-header">Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><a class="include" href="ShortMessage/UserMethods.html">ShortMessage::UserMethods</a>
+  
+  
+  </ul>
+</nav>
+
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-find_for_database_authentication">::find_for_database_authentication</a>
+    
+    <li><a href="#method-i-set_default_role">#set_default_role</a>
+    
+    <li><a href="#method-i-set_login_for_internet_version">#set_login_for_internet_version</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ShortMessage.html">ShortMessage</a>
+  
+    <li><a href="./ShortMessage/UserMethods.html">ShortMessage::UserMethods</a>
+  
+    <li><a href="./Ability.html">Ability</a>
+  
+    <li><a href="./AccountCell.html">AccountCell</a>
+  
+    <li><a href="./AccountController.html">AccountController</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./ExchangeMessage.html">ExchangeMessage</a>
+  
+    <li><a href="./FayeClient.html">FayeClient</a>
+  
+    <li><a href="./IndexController.html">IndexController</a>
+  
+    <li><a href="./LayoutCell.html">LayoutCell</a>
+  
+    <li><a href="./ServiceStatus.html">ServiceStatus</a>
+  
+    <li><a href="./SessionsController.html">SessionsController</a>
+  
+    <li><a href="./ShortMessagesController.html">ShortMessagesController</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UserMailer.html">UserMailer</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class User</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-find_for_database_authentication" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">find_for_database_authentication</span><span
+            class="method-args">(conditions)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="find_for_database_authentication-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find_for_database_authentication</span>(<span class="ruby-identifier">conditions</span>)
+  <span class="ruby-identifier">login</span> = <span class="ruby-identifier">conditions</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:login</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:login</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">login</span>).<span class="ruby-identifier">first</span> <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:email</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">login</span>).<span class="ruby-identifier">first</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- find_for_database_authentication-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- find_for_database_authentication-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-set_default_role" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_default_role</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="set_default_role-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_default_role</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">role</span> = <span class="ruby-value">:student</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">role</span>.<span class="ruby-identifier">blank?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- set_default_role-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- set_default_role-method -->
+
+    
+      <div id="method-i-set_login_for_internet_version" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_login_for_internet_version</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="set_login_for_internet_version-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_login_for_internet_version</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">login</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">email</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">login</span>.<span class="ruby-identifier">blank?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">id</span>.<span class="ruby-identifier">blank?</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">password_confirmation</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">password</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- set_login_for_internet_version-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- set_login_for_internet_version-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

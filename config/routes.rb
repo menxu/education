@@ -8,6 +8,16 @@ Education::Application.routes.draw do
   end
 end
 
+# 短消息
+Education::Application.routes.draw do
+  resources :short_messages, :shallow => true do
+    collection do
+      get :chatlog
+    end
+  end
+end
+
+
 Education::Application.routes.draw do
   devise_for :users,:path => 'account',
                     :controllers => {  

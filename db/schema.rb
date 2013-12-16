@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131204093713) do
+ActiveRecord::Schema.define(:version => 20131211073350) do
+
+  create_table "short_messages", :force => true do |t|
+    t.integer  "sender_id"
+    t.integer  "receiver_id"
+    t.text     "content"
+    t.boolean  "receiver_read", :default => false
+    t.boolean  "sender_hide",   :default => false
+    t.boolean  "receiver_hide", :default => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
+  end
+
+  add_index "short_messages", ["receiver_id"], :name => "index_short_messages_on_receiver_id"
+  add_index "short_messages", ["sender_id"], :name => "index_short_messages_on_sender_id"
 
   create_table "users", :force => true do |t|
     t.string   "login",                  :default => "", :null => false
