@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   validates :login, :format => {:with => /\A\w+\z/, :message => '只允许数字、字母和下划线'},
-                    :length => {:in => 6..20},
+                    :length => {:in => 2..20},
                     :presence => true,
                     :uniqueness => {:case_sensitive => false},
                     :unless => Proc.new { |user|
