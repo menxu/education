@@ -1,9 +1,3 @@
-GIT
-  remote: git://github.com/mindpin/roles-field.git
-  revision: 888ee30014e47f12225f901649026b905c81544d
-  specs:
-    roles-field (0.0.2.1)
-
 GEM
   remote: http://ruby.taobao.org/
   specs:
@@ -114,6 +108,7 @@ GEM
     rake (10.1.1)
     rdoc (3.12.2)
       json (~> 1.4)
+    roles-field (0.0.2)
     rspec-core (2.13.1)
     rspec-expectations (2.13.0)
       diff-lcs (>= 1.1.3, < 2.0)
@@ -176,7 +171,7 @@ DEPENDENCIES
   json
   mini_magick (= 3.5.0)
   mysql2 (= 0.3.11)
-  roles-field!
+  roles-field
   rspec-rails (= 2.13.0)
   ruby-progressbar (~> 1.0.2)
   sass-rails (~> 3.2.3)
