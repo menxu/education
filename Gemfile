@@ -51,3 +51,4 @@ gem 'roles-field',
 
 gem 'faye'
 gem 'celluloid'
+  
