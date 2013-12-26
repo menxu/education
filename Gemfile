@@ -1,7 +1,9 @@
 source 'http://ruby.taobao.org'
 
+gem 'rails', '3.2.12'
+
 gem 'mysql2', '0.3.11' # MYSQL数据库连接
-gem 'json'
+gem 'json', '1.7.7'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -28,7 +30,7 @@ end
 gem 'jquery-rails', '2.2.1'
 gem 'jquery-ui-rails', '4.0.2'
 
-gem 'unicorn'
+gem 'unicorn', '4.6.2'
 
 # 登录验证
 gem 'devise', '2.2.4'
@@ -49,4 +51,6 @@ gem 'faye'
 gem 'celluloid'
 
 ## 用户角色
-gem 'roles-field'
+gem 'roles-field',
+    :git => 'git://github.com/mindpin/roles-field.git',
+    :tag => '0.0.2.1'
