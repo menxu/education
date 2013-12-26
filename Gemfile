@@ -52,5 +52,4 @@ gem 'celluloid'
 
 ## 用户角色
 gem 'roles-field',
-    :git => 'git://github.com/mindpin/roles-field.git',
-    :tag => '0.0.2.1'
+    :git => 'git://github.com/mindpin/roles-field.git'
