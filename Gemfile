@@ -15,6 +15,7 @@ group :assets do
 end
 
 group :test do
+  gem 'database_cleaner', '~> 1.2.0'
   gem 'rspec-rails', '2.13.0' # rspec 测试
   gem 'factory_girl_rails', '~> 4.2.1' # yaml factory
 end
@@ -47,14 +48,14 @@ gem "carrierwave", "0.8.0"
 # carrierwave 用到的图片切割
 gem "mini_magick", "3.5.0", :require => false
 
-gem 'faye'
+gem 'faye', '1.0.1'
 gem 'celluloid'
 
 ## 用户角色
-gem 'roles-field',
-    :git => 'git://github.com/mindpin/roles-field.git' 
-    # tag -> 0.0.2.1
+gem 'columns-roles',
+    :git => 'git://github.com/topmi/columns-roles.git' 
+    # tag -> 0.0.1
 
 gem 'excel-import',
     :git => 'git://github.com/menxu/excel_import.git'
-    # tag -> 0.0.1
+    #tag -> 0.0.1
