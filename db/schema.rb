@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131211073350) do
+ActiveRecord::Schema.define(:version => 20131231081107) do
+
+  create_table "file_entities", :force => true do |t|
+    t.string   "attach_file_name"
+    t.string   "attach_content_type"
+    t.integer  "attach_fle_size",     :limit => 8
+    t.datetime "attach_updated_at"
+    t.string   "md5"
+    t.boolean  "merged",                           :default => false
+    t.string   "video_encode_status"
+    t.integer  "saved_size",          :limit => 8
+  end
 
   create_table "short_messages", :force => true do |t|
     t.integer  "sender_id"

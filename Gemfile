@@ -14,8 +14,15 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+
 gem 'sunspot_rails', '2.0.0'
 gem 'sunspot_solr',  '2.1.0'
+
+gem 'docsplit',      '0.7.2'
+
+gem 'sidekiq', '2.8.0'
+gem 'sidekiq-limit_fetch', '1.4'
+
 
 group :test do
   gem 'database_cleaner', '~> 1.2.0'
@@ -63,3 +70,8 @@ gem 'columns-roles',
 gem 'excel-import',
     :git => 'git://github.com/menxu/excel_import.git'
     #tag -> 0.0.1
+
+## 文件分段上传
+gem 'file-part-upload', 
+    :git => 'git://github.com/mindpin/file-part-upload.git',
+    :tag => '0.0.8'
