@@ -14,10 +14,14 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'sunspot_rails', '2.0.0'
+gem 'sunspot_solr',  '2.1.0'
+
 group :test do
   gem 'database_cleaner', '~> 1.2.0'
   gem 'rspec-rails', '2.13.0' # rspec 测试
   gem 'factory_girl_rails', '~> 4.2.1' # yaml factory
+  gem 'sunspot-rails-tester', '1.0.0'
 end
 
 group :examples do
