@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-module FileEntityConvertMethods
+module FileEntityConvertMethodes
   class ConvertStatus
     READY      = 'READY'
     QUEUE_WAIT = 'QUEUE_WAIT'
