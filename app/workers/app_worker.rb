@@ -1,13 +1,14 @@
-module AppWorker
-  def self.include(base)
+module  AppWorker
+  def self.included(base)
     base.send :include, Sidekiq::Worker
-    base.send :extend,  ClassMethodes
+    base.send :extend,  ClassMethods
   end
 
-  module ClassMethodes
+  module ClassMethods
     def sidekiq_running?
-      `ps aux | grep sidekiq`.split("\n").select { |process| process.include? 'busy'}.present?
+      `ps aux | grep sidekiq`.split("\n").select {|process| process.include? 'busy'}.present?
     end
   end
-  extend ClassMethodes
+
+  extend ClassMethods
 end

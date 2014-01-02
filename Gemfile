@@ -23,6 +23,8 @@ gem 'docsplit',      '0.7.2'
 gem 'sidekiq', '2.8.0'
 gem 'sidekiq-limit_fetch', '1.4'
 
+gem 'slim', '1.3.8', :require => false
+gem 'sinatra', '1.3.0', :require => false
 
 group :test do
   gem 'database_cleaner', '~> 1.2.0'

@@ -4,7 +4,7 @@ class FileEntity < ActiveRecord::Base
 
   if Rails.env == 'test'
     file_part_upload :path => File.join(R::UPLOAD_BASE_PATH, 'files/test/:class/:id/:name'),
-                     :url  => File.join("/",R::STATIC_FILES_PATH, 'files/test/:class/:id/:name')
+                     :url  => File.join("/",R::STATIC_FILES_DIR, 'files/test/:class/:id/:name')
 
   else
     file_part_upload :path => File.join(R::UPLOAD_BASE_PATH, 'files/:class/:id/:name'),
