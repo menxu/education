@@ -27,9 +27,12 @@ gem 'slim', '1.3.8', :require => false
 gem 'sinatra', '1.3.0', :require => false
 
 group :test do
-  gem 'database_cleaner', '~> 1.2.0'
+  gem 'database_cleaner', '~> 1.2.0' # 加速测试时数据库清理
   gem 'rspec-rails', '2.13.0' # rspec 测试
   gem 'factory_girl_rails', '~> 4.2.1' # yaml factory
+  gem 'capybara', '2.0.2' # 集成测试框架
+  gem 'timecop', '0.6.1' # 用于在测试中调整时间
+  gem 'rspec-cells', '0.1.7' # 用于测试 cells
   gem 'sunspot-rails-tester', '1.0.0'
 end
 

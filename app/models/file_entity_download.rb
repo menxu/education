@@ -1,8 +1,8 @@
 module FileEntityDownload
   def self.included(base)
-    base.send :extend, ClassMethodes
+    base.send :extend, ClassMethods
   end
-  module ClassMethodes
+  module ClassMethods
     def from_download_id(download_id)
       decode = Base64.decode64(download_id)
       self.find decode.split(",")[1].to_i

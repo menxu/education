@@ -11,6 +11,8 @@ class FileEntity < ActiveRecord::Base
                      :url  => File.join("/", R::STATIC_FILES_DIR, 'files/:class/:id/:name')
   end
 
+  has_many :media_resources
+
   EXTNAME_HASH = {
     :video => [
       'avi', 'rm',  'rmvb', 'mp4', 
