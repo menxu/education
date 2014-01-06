@@ -61,4 +61,5 @@ class User < ActiveRecord::Base
     end
 
   include ShortMessage::UserMethods
+  include MediaResource::UserMethods
 end

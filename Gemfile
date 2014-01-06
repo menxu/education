@@ -27,6 +27,7 @@ gem 'slim', '1.3.8', :require => false
 gem 'sinatra', '1.3.0', :require => false
 
 group :test do
+  gem "awesome_print"
   gem 'database_cleaner', '~> 1.2.0' # 加速测试时数据库清理
   gem 'rspec-rails', '2.13.0' # rspec 测试
   gem 'factory_girl_rails', '~> 4.2.1' # yaml factory

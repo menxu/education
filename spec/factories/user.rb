@@ -15,5 +15,13 @@ FactoryGirl.define do
     trait :student do
       role :student
     end
+
+    trait :student do
+      role :student
+    end
+
+    trait :manager do
+      role :manager
+    end
   end
 end

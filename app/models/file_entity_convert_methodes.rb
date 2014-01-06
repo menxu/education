@@ -11,8 +11,8 @@ module FileEntityConvertMethodes
   end
 
   def self.included(base)
-    base.before_save :init_convert_status
-    base.after_save :convert_enqueue_by_status
+    base.before_save  :init_convert_status
+    base.after_save   :convert_enqueue_by_status
   end
 
   def init_convert_status
@@ -77,7 +77,7 @@ module FileEntityConvertMethodes
       return
     end
 
-    if MindpinWorker.sidekiq_running?
+    if AppWorker.sidekiq_running?
       CourseWareConverter.perform_async(self.id)      
       convert_queue_wait!
     else
