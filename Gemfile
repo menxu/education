@@ -81,3 +81,8 @@ gem 'excel-import',
 gem 'file-part-upload', 
     :git => 'git://github.com/mindpin/file-part-upload.git',
     :tag => '0.0.8'
+
+## 给指定 activerecord 模型动态添加属性
+gem 'dynamic_attrs',
+    :git => 'git://github.com/kaid/dynamic_attrs.git',
+    :tag => 'v0.0.1'

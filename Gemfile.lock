@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/kaid/dynamic_attrs.git
+  revision: 98506c8befc25c1643f023043fb0a667a332756c
+  tag: v0.0.1
+  specs:
+    dynamic_attrs (0.1.0)
+      activerecord (~> 3.2.12)
+      railties (~> 3.2.12)
+
+GIT
   remote: git://github.com/menxu/excel_import.git
   revision: f7e3fab6468f62a3cb797e0bcf4cbcdb47a3137f
   specs:
@@ -303,6 +312,7 @@ DEPENDENCIES
   database_cleaner (~> 1.2.0)
   devise (= 2.2.4)
   docsplit (= 0.7.2)
+  dynamic_attrs!
   excel-import!
   factory_girl_rails (~> 4.2.1)
   faye (= 1.0.1)
