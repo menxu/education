@@ -142,6 +142,7 @@ GEM
     htmlentities (4.3.1)
     http_parser.rb (0.6.0)
     i18n (0.6.9)
+    iconv (1.0.2)
     journey (1.0.4)
     jquery-rails (2.2.1)
       railties (>= 3.0, < 5.0)
@@ -318,6 +319,7 @@ DEPENDENCIES
   faye (= 1.0.1)
   file-part-upload!
   haml (= 4.0.3)
+  iconv (= 1.0.2)
   jquery-rails (= 2.2.1)
   jquery-ui-rails (= 4.0.2)
   json (= 1.7.7)

@@ -68,6 +68,9 @@ gem "mini_magick", "3.5.0", :require => false
 gem 'faye', '1.0.1'
 gem 'celluloid'
 
+# 编码处理基础库
+gem 'iconv', '1.0.2'
+
 ## 用户角色
 gem 'columns-roles',
     :git => 'git://github.com/topmi/columns-roles.git' 

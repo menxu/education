@@ -63,18 +63,15 @@ class User < ActiveRecord::Base
                     :updater => lambda {AttrsConfig.get(:teacher)}
 
   # 导入文件
-  excel_import :role_admin, :fields => [:login, :name, :email],
+  excel_import :admin, :fields => [:login, :name, :email],
                                 :default => {:role => :admin}
 
-  excel_import :role_student, :fields => [:login, :name, :email],
+  excel_import :student, :fields => [:login, :name, :email],
                                 :default => {:role => :student}
   def self.import_excel(excel_file, role, password = '123456')
     users = self.parse_excel_student excel_file if role == :student
     users = self.parse_excel_admin excel_file if role == :admin
-
-    p '---------'
-    p users.size
-    p '---------'
+    
     users.each do |u|
       u.password = password
       u.password_confirmation = password
