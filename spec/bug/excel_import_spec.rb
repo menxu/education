@@ -3,7 +3,7 @@ require "spec_helper"
 describe "修复当excel里用户名栏为数字时的导入错误" do
   context {
 
-    let(:file) {File.open("./spec/support/resources/users.xlsx")}
+    let(:file) {File.open("./spec/support/resources/user.xlsx")}
     subject {User.import_excel(file, :student, password = "123456")}
     after {file.close}
 
