@@ -1,5 +1,19 @@
 class AccountController < Devise::RegistrationsController
+  layout Proc.new { |controller|
+    if controller.request.headers['X-PJAX']
+      return false
+    end
 
+    case controller.action_name
+    when 'new', 'create'
+      return 'auth'
+    when 'edit'
+      return 'account'
+    else
+      return 'account'
+    end
+  }
+  
   def new
     super
   end

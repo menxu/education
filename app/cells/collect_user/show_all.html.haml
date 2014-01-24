@@ -1,0 +1,5 @@
+.page-collect-user-list
+
+  = page_tile :collect_users, @collect_users do
+    - add :title do |collect_user|
+      = link_to collect_user, collect_user

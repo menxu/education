@@ -1,0 +1,4 @@
+- @collect_users = ['a','b','c','d','e','f']
+.page-collect-user-index
+  %h3.desc 显示用户数据
+  = render_cell :collect_user, :show_all, :user => current_user, :collect_users => @collect_users

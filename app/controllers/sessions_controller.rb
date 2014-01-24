@@ -1,4 +1,19 @@
 class SessionsController < Devise::SessionsController
+  layout Proc.new { |controller|
+    if controller.request.headers['X-PJAX']
+      return false
+    end
+
+    case controller.action_name
+    when 'new', 'create'
+      return 'auth'
+    when 'edit'
+      return 'account'
+    else
+      return 'account'
+    end
+  }
+  
   def new
     super
     # 在这里添加其他逻辑

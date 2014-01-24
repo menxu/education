@@ -47,6 +47,7 @@ end
 
 gem 'jquery-rails', '2.2.1'
 gem 'jquery-ui-rails', '4.0.2'
+gem "font-awesome-rails"
 
 gem 'unicorn', '4.6.2'
 
@@ -79,6 +80,14 @@ gem 'columns-roles',
 gem 'excel-import',
     :git => 'git://github.com/menxu/excel_import.git'
     #tag -> 0.0.1
+
+## 页面布局辅助
+gem 'simple-page-layout',
+    :git => 'git://github.com/mindpin/simple-page-layout',
+    :tag => '0.0.3'
+gem 'simple-page-compoents',
+    :git => 'git://github.com/mindpin/simple-page-compoents',
+    :tag => '0.0.7.8'
 
 ## 文件分段上传
 gem 'file-part-upload', 

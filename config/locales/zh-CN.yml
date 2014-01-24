@@ -53,6 +53,11 @@ zh-CN:
     sign-up: 注　册
     sign-uping: 正在注册
 
+    site:
+      title:
+        app: 收集收集录
+        admin: 收集收集录 | 管理员
+
   devise:
     failure:
       user:

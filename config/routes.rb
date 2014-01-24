@@ -17,6 +17,19 @@ Education::Application.routes.draw do
   end
 end
 
+# 记录用户数据
+Education::Application.routes.draw do
+  resources :collect_users, :shallow => true do
+    collection do
+      get :user_attrs
+    end
+
+    member do
+      get :user_des
+    end
+  end
+end
+
 
 Education::Application.routes.draw do
   devise_for :users,:path => 'account',
@@ -31,6 +44,9 @@ Education::Application.routes.draw do
   end
                     
   root :to => 'index#index'
+  get '/user_home'  => 'index#user_home'
+  get '/admin_home' => 'index#admin_home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
