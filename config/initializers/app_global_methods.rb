@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # 产生一个随机字符串
 def randstr(length=8)
   base = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -31,4 +33,27 @@ def rename_duplicated_file_name(file_name)
   new_file_basename = dup_note_match ? file_basename.sub(dup_note_reg, "(#{dup_note_match[1].to_i + 1})") : file_basename + '(1)'
 
   new_file_basename + file_ext
+end
+
+def parse_csv_file(file)
+  raise '请先选择 一个 CSV 文件' if file.blank?
+  if File.extname(file.original_filename) != '.csv'
+    raise '你导入的不是一个 CSV 文件'
+  end
+  require 'csv'
+  rows = CSV::parse(file.read)
+  puts "----------===========  #{rows}"
+  puts "----------===========  #{rows[0]}"
+  puts "----------===========  #{rows[0].join(",")}"
+
+  # puts "----------===========  #{rows[0].join(",").utf8?}"
+  # is_utf8 = rows[0].join(",").utf8?
+  # puts "----------===========  #{is_utf8}"
+  rows.each_with_index do |row,index|
+    # next if index == 0
+    # row = row.map{|v|(v || "").gb2312_to_utf8} if !is_utf8
+    puts row
+    puts '  '
+    yield row,index
+  end
 end

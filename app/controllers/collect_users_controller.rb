@@ -5,7 +5,7 @@ class CollectUsersController < ApplicationController
     case controller.action_name
     when :show, :update
       return 'collect_user_show'
-    when 'index'
+    when 'index', 'import'
       return 'collect_user'
     else
       return 'application'
@@ -16,12 +16,23 @@ class CollectUsersController < ApplicationController
     
   end
 
+
+  def import
+    
+  end
+
+  def download_import_file
+    authorize! :manage, User
+    send_file CollectUser.download_from_csv, :filename => 'collect_users.csv'
+  end
+
   def import_from_csv
+
     CollectUser.import_from_csv(params[:csv_file])
     redirect_to "/collect_users"
   rescue Exception => ex
     flash[:error] = ex.message
-    redirect_to "/collect_users/import_from_csv"
+    redirect_to "/collect_users/import"
   end
   
   def collect_user

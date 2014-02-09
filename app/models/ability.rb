@@ -28,5 +28,9 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/ryanb/cancan/wiki/Defining-Abilities
+
+    if !user.blank? && user.is_admin?
+        can :manage, User
+    end
   end
 end

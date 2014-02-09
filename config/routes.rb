@@ -22,6 +22,9 @@ Education::Application.routes.draw do
   resources :collect_users, :shallow => true do
     collection do
       get :user_attrs
+      get :import
+      get :download_import_file
+      post :import_from_csv
     end
 
     member do

@@ -1,3 +1,10 @@
+- content_for :header do
+  %h1 搜集记录管理
+  .btns
+    %a.btn.success-flat{:href => '/collect_users/import'}
+      %i.icon-upload.icon-white
+      %span 导入 CSV
+
 - @collect_users = ['a','b','c','d','e','f']
 .page-collect-user-index
   %h3.desc 显示用户数据

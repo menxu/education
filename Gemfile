@@ -72,6 +72,9 @@ gem 'celluloid'
 # 编码处理基础库
 gem 'iconv', '1.0.2'
 
+# 权限管理
+gem "cancan", "~> 1.6.10"
+
 ## 用户角色
 gem 'columns-roles',
     :git => 'git://github.com/topmi/columns-roles.git' 
