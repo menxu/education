@@ -42,18 +42,11 @@ def parse_csv_file(file)
   end
   require 'csv'
   rows = CSV::parse(file.read)
-  puts "----------===========  #{rows}"
-  puts "----------===========  #{rows[0]}"
-  puts "----------===========  #{rows[0].join(",")}"
-
-  # puts "----------===========  #{rows[0].join(",").utf8?}"
-  # is_utf8 = rows[0].join(",").utf8?
-  # puts "----------===========  #{is_utf8}"
+  is_utf8 = rows[0].join(",").utf8?
+  
   rows.each_with_index do |row,index|
-    # next if index == 0
-    # row = row.map{|v|(v || "").gb2312_to_utf8} if !is_utf8
-    puts row
-    puts '  '
+    next if index == 0
+    row = row.map{|v|(v || "").gb2312_to_utf8} if !is_utf8
     yield row,index
   end
 end

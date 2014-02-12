@@ -27,7 +27,6 @@ class CollectUsersController < ApplicationController
   end
 
   def import_from_csv
-
     CollectUser.import_from_csv(params[:csv_file])
     redirect_to "/collect_users"
   rescue Exception => ex
