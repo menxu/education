@@ -1,4 +1,4 @@
-source 'http://ruby.taobao.org'
+source 'http://ruby.taobao.org' #6222600910073212720
 
 gem 'rails', '3.2.12'
 
