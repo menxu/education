@@ -48,8 +48,8 @@ Education::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
-  test_logfile = File.open("#{Rails.root}/log/test_logger.log", "a+")
-  test_logfile.sync = true
-  TEST_LOG = TestLogger.new(test_logfile)
+  # test_logfile = File.open("#{Rails.root}/log/test_logger.log", "a+")
+  # test_logfile.sync = true
+  # TEST_LOG = TestLogger.new(test_logfile)
   # TEST_LOG.info 'log'
 end
